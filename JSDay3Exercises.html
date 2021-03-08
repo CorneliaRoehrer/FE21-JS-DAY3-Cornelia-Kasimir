@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 exercise1"><p id="basic1F1">+</p></div>
+            <div class="col-lg-4 exercise1"><p id="basic1F2">+</p></div>
+            <div class="col-lg-4 exercise1"><p id="basic1F3">+</p></div>
+        </div>
+        <div class="row">
+            <div class="col-4 exercise1"><p id="basic2F1">+</p></div>
+            <div class="col-4 exercise1"><p id="basic2F2">+</p></div>
+            <div class="col-4 exercise1"><p id="basic2F3">+</p></div>
+        </div>
+        <div class="row">
+            <div class="col-4 exercise1"><p id="basic3F1">+</p></div>
+            <div class="col-4 exercise1"><p id="basic3F2">+</p></div>
+            <div class="col-4 exercise1"><p id="basic3F3">+</p></div>
+        </div>
+    </div>
+    <script>
+        //Basic 1
+        //create a program. whether the temperatur is is cold (-5, 10) or (11, 25) moderate.
+
+        var randomTemp = Math.floor(((Math.random() * 26) - 5));
+            document.getElementById("basic1F1").innerHTML = randomTemp;
+        if (randomTemp <= 10) {
+            document.getElementById("basic1F2").innerHTML = "The weather is cold";
+        } else { 
+            document.getElementById("basic1F3").innerHTML = "The weather is warm";
+        }
+
+    </script>
+</body>
+</html>
