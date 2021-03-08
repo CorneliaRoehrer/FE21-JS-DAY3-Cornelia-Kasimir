@@ -27,7 +27,6 @@
     <script>
         //Basic 1
         //create a program. whether the temperatur is is cold (-5, 10) or (11, 25) moderate.
-
         var randomTemp = Math.floor(((Math.random() * 26) - 5));
             document.getElementById("basic1F1").innerHTML = randomTemp;
         if (randomTemp <= 10) {
@@ -36,6 +35,42 @@
             document.getElementById("basic1F3").innerHTML = "The weather is warm";
         }
 
+        // Basic 2
+        // create loop to select highest number of array
+
+        var numbersMax = [1, 7, -3, 9];
+        // let max = numbersMax[0];
+        // for (var index of numbersMax){
+        //     if (numbersMax[index] > max){
+        //         max = numbersMax[index];
+
+        //     }
+        // document.getElementById("basic2F1").innerHTML = max;
+        // }
+
+
+        var a = numbersMax[0];
+        var b = numbersMax[1];
+        var c = numbersMax[2];
+        var d = numbersMax[3];
+
+        if ((a > b) && (a > c) && (a > d)){
+            max = a;
+        }
+
+        else if ((b > a) && (b > c) && (b > d)){
+            max = b;
+        }
+
+        else if ((c > a) && (c > b) && (c > d)){
+            max = c;
+        }
+
+        else if ((d > b) && (d > c) && (d > a)){
+            max = d;
+        }
+        document.getElementById("basic2F1").innerHTML = max;
+
     </script>
 </body>
-</html>
+</html> 
