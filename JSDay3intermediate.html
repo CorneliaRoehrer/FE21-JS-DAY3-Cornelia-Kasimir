@@ -9,7 +9,7 @@
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-sm-12 exercise1"><p id="basic1F1">+</p></div>
+            <div class="col-sm-12 exercise1"><p id="basic1F1"></p></div>
             <div class="col-sm-12 exercise1"><p id="basic1F2">+</p></div>
             <div class="col-sm-12 exercise1"><p id="basic1F3">+</p></div>
         </div>
@@ -25,23 +25,24 @@
         </div>
     </div>
     <script>
-        // var studentGrades = [["Martin", 76], ["Thomas", 85], ["Klaus", 65], ["Maria", 93], ["David", 81]];
-        // for (var index of studentGrades){
-        //     // console.log(index);
-        //     var indexIndex = index;
-        //     for (var items of index){
-        //         var namePupil = indexIndex[0];
-        //         var pointsPupil = indexIndex[1];
-        //         document.getElementById("basic1F1").innerHTML += pointsPupil + "<br>";
-        //     }
-        // }
-        // console.log(pointsPupil);
-
-        var  studentGrades = [76, 85, 65, 93, 81];
-        
-
-
-
+        var studentGrades = [["Martin", 76], ["Thomas", 85], ["Klaus", 65], ["Maria", 93], ["David", 81]];
+        for (let i=0; i< studentGrades.length; i++) {
+                var pName = studentGrades[i][0];
+                var pPoints = studentGrades[i][1];
+                var pGrade = ""
+                if (pPoints < 60) {
+                    pGrade ="F";
+                } else if (pPoints < 70){
+                    pGrade ="D";
+                } else if (pPoints < 80){
+                    pGrade ="C";
+                } else if (pPoints < 90){
+                    pGrade ="B"
+                } else {
+                    pGrade ="A"
+                }
+                document.getElementById("basic1F1").innerHTML += pName + " " + pPoints + " " + pGrade + "<br>";
+        }
     </script>
 </body>
 </html>
